@@ -7,8 +7,8 @@ logger = logging.getLogger(__name__)
 def refresh():
     c = Cricbuzz()
     match = c.matches()
-    mid = match[0]['id']
-    matches = match[0]
+    mid = match[1]['id']
+    matches = match[1]
     livescore = c.livescore(mid=mid)
     scorecard = c.scorecard(mid=mid)
     matchinfo = c.matchinfo(mid=mid)
